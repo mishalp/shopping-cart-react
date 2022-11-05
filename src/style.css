@@ -23,8 +23,8 @@ nav{
 .navMenu{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 .navMenu > a{

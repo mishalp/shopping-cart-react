@@ -1,0 +1,60 @@
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.products{
+    background-color: rgb(243, 243, 243);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards > a{
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.card > h2{
+    font-size: 2rem;
+}
+
+.card > p{
+    font-size: 1.2rem;
+}
+
+.card > h6{
+    font-size: 1.5rem;
+}
+
+.card > a >button{
+    padding: .5rem 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    transition: .4s;
+    cursor: pointer;
+}
+.card > a >button:hover{
+    background-color: white;
+    color: black;
+}
+
+.card > img{
+    width: 15rem;
+}
