@@ -8,22 +8,25 @@ const products = [
         id: 0,
         name: 'I Phone 14',
         desc: 'Very nice phone',
-        cost: 100000,
+        price: 79900,
         image: iPhone,
+        piece: 1,
     },
     {
         id: 1,
         name: 'Google Pixel 7',
         desc: 'Very nice phone',
-        cost: 90000,
+        price: 59999,
         image: pixel7,
+        piece: 1,
     },
     {
         id: 2,
         name: 'Xiomi 12 Pro',
         desc: 'very nice phone',
-        cost: 30000,
+        price: 67499,
         image: xiomi12,
+        piece: 1,
     }
 
 ]

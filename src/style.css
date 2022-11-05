@@ -41,6 +41,23 @@ nav{
     transform: scale(1.1);
 }
 
+.navMenu > a > img{
+    width: 2rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.navMenu > a > .badge{
+    background-color: white;
+    color: black;
+    font-size: small;
+    padding: .5rem .8rem;
+    border-radius: 50%;
+    position: absolute;
+    translate: 30px -20px;
+}
+
 .main{
     width: 100%;
     height: 100vh;

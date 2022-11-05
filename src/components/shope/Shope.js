@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import products from '../../product'
 import './shope.css'
 
+
+
 const CardBuilder = (props)=>{
+  let dollarIndianLocale = Intl.NumberFormat('en-IN')
   return(
     <div className="cards">
       {props.product.map((item)=>{
-        return <a href="#">
+        return <a href="#" key={item.id}>
           <div className="card">
             <img src={item.image} alt="" />
             <h2>{item.name}</h2>
-            <p>{item.desc}</p>
-            <h6>{item.cost} ₹</h6>
-            <a href="#"><button>Add to Cart</button></a>
+            
+            <div>
+              <button data-id={item.id} onClick={props.addToCart}>Add to Cart</button>
+              <h6>₹{dollarIndianLocale.format(item.price)}</h6>
+            </div>
           </div>
         </a>
       })}
@@ -20,11 +25,49 @@ const CardBuilder = (props)=>{
   )
 }
 
-function Shope() {
+function Shope(props) {
+
+  const [cart, updateCart] = useState([]);
+  const [total, setTotal] = useState(0)
+
+  useEffect(()=>{
+    console.log(cart);
+    let temp = 0;
+    let count = 0;
+    cart.forEach(item=>{
+      temp = temp + item.price
+      count++
+    })
+    props.updateCartCount(count)
+    console.log(temp);
+
+  }, [cart])
+
+  const addToCart = (e)=>{
+    console.log(e.target.dataset.id);
+    var index = e.target.dataset.id;
+    let temp = cart;
+    let flag = false;
+    console.log(index);
+    cart.forEach((item, id)=>{
+      if(item.id == index){
+        flag = true
+        temp[id].piece++;
+        updateCart([...temp])
+      }
+    })
+
+
+    if(!flag){
+      temp = temp.concat(products[index])
+      updateCart([...temp])
+    }
+  }
+
   return (
     <div className='products'>
       <h1>Prouducts</h1>
-        <CardBuilder product={products} />
+        <CardBuilder product={products} addToCart={addToCart} />
     </div>
   )
 }
