@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Lobster&family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    border: 1px solid black;
+    display: flex  ;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    font-family: 'Bevan', cursive;
+}
+
+.title{
+    font-size: 2.5rem;
+}
+
+.navMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navMenu > a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;  
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    display: block;
+    transition: 0.15s ease-in-out;
+}
+
+.navMenu > a:hover{
+    transform: scale(1.1);
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('./images/bg.jpg');
+}
+
+@media only screen and (min-width: 375px) {
+    .main{
+        height: auto;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .title{
+        font-size: 1rem;
+    }
+
+    .right > img{
+        width: 90vw;
+    }
+
+    .left > div{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .left > div > a > button{
+        font-size: 1.5rem;
+    }
+
+    .navMenu > a{
+        font-size: .8rem;
+    }
+
+    .sub{
+        font-size: 1rem;
+    }
+
+    .caption{
+        font-size: 2rem;
+    }
+
+    .home{
+        padding: 1rem;
+    }
+}
+
+@media only screen and (min-width: 425px){
+    .home{
+        padding: 1rem 3rem;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .home{
+        padding: 1rem 7rem;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .home{
+        flex-direction: row;  
+        padding: 1rem 2rem;     
+    }
+
+    .left > div{
+        justify-content: start;
+    }
+
+    .right > img{
+        max-width: 250px;
+    }
+
+    .caption{
+        font-size: 2.5rem;
+    }
+
+    .sub{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .title{
+        font-size: 2rem;
+    }
+
+    .navMenu > a{
+        font-size: 1.2rem;
+    }
+
+    .home{
+        padding: 7rem;
+    }
+
+    .right > img{
+        max-width: 350px;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .home{
+        padding: 10rem;
+    }
+}
