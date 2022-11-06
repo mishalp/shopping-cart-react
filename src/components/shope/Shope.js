@@ -4,7 +4,13 @@ import './shope.css'
 
 
 const CardBuilder = (props)=>{
-  let dollarIndianLocale = Intl.NumberFormat('en-IN')
+  let dollarIndianLocale = Intl.NumberFormat('en-IN');
+
+  const addToCart = (e)=>{
+    e.preventDefault();
+    e.stopPropagation()
+    props.addToCart(e.target.dataset.id)
+  }
   return(
     <div className="cards">
       {props.product.map((item)=>{
@@ -13,7 +19,7 @@ const CardBuilder = (props)=>{
             <img src={item.image} alt="" />
             <h2>{item.name}</h2>
             <div>
-              <button data-id={item.id} onClick={props.addToCart}>Add to Cart</button>
+              <button data-id={item.id} onClick={addToCart}>Add to Cart</button>
               <h6>₹{dollarIndianLocale.format(item.price)}</h6>
             </div>
           </div>
@@ -34,8 +40,7 @@ function Shope(props) {
     }
   }, [props.cart])
 
-  const addToCart = (e)=>{
-    var index = e.target.dataset.id;
+  const addToCart = (index)=>{
     let temp = props.cart;
     let flag = false;
     props.cart.forEach((item, id)=>{

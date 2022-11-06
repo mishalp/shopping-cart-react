@@ -8,6 +8,8 @@
     flex-wrap:nowrap ;
     gap: 30px;
     flex: 1;
+    padding-top: 6rem !important;
+    min-height: 80vh;
 }
 
 .left, .right{
