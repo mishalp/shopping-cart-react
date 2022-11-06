@@ -14,6 +14,8 @@ nav{
     background-color: black;
     color: white;
     font-family: 'Bevan', cursive;
+    position: fixed;
+    width: 100vw;
 }
 
 .title{
@@ -55,15 +57,12 @@ nav{
     padding: .5rem .8rem;
     border-radius: 50%;
     position: absolute;
-    translate: 30px -20px;
+    translate: 25px -30px;
 }
 
 .main{
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background: url('./images/bg.jpg');
 }
 
@@ -127,6 +126,10 @@ nav{
     .home{
         flex-direction: row;  
         padding: 1rem 2rem;     
+    }
+
+    .title{
+        font-size: 1.5rem;
     }
 
     .left > div{

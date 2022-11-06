@@ -3,7 +3,6 @@ import products from '../../product'
 import './shope.css'
 
 
-
 const CardBuilder = (props)=>{
   let dollarIndianLocale = Intl.NumberFormat('en-IN')
   return(
@@ -13,7 +12,6 @@ const CardBuilder = (props)=>{
           <div className="card">
             <img src={item.image} alt="" />
             <h2>{item.name}</h2>
-            
             <div>
               <button data-id={item.id} onClick={props.addToCart}>Add to Cart</button>
               <h6>₹{dollarIndianLocale.format(item.price)}</h6>
@@ -27,41 +25,40 @@ const CardBuilder = (props)=>{
 
 function Shope(props) {
 
-  const [cart, updateCart] = useState([]);
   const [total, setTotal] = useState(0)
 
   useEffect(()=>{
-    console.log(cart);
-    let temp = 0;
-    let count = 0;
-    cart.forEach(item=>{
-      temp = temp + item.price
-      count++
-    })
-    props.updateCartCount(count)
-    console.log(temp);
-
-  }, [cart])
+    console.log(props.cart);
+    if(props.cart.length != 0){
+      setTotal(calculateTotal(props.cart))
+    }
+  }, [props.cart])
 
   const addToCart = (e)=>{
-    console.log(e.target.dataset.id);
     var index = e.target.dataset.id;
-    let temp = cart;
+    let temp = props.cart;
     let flag = false;
-    console.log(index);
-    cart.forEach((item, id)=>{
+    props.cart.forEach((item, id)=>{
       if(item.id == index){
         flag = true
         temp[id].piece++;
-        updateCart([...temp])
+        props.updateCart([...temp])
       }
     })
 
-
     if(!flag){
       temp = temp.concat(products[index])
-      updateCart([...temp])
+      props.updateCart([...temp])
     }
+    
+  }
+
+  const calculateTotal = (cart)=>{
+      var amount = cart.reduce((all, item)=>{
+        return all + (item.price * item.piece)
+      }, 0)
+      console.log(amount);
+      return amount;
   }
 
   return (
@@ -71,7 +68,5 @@ function Shope(props) {
     </div>
   )
 }
-
-
 
 export default Shope
