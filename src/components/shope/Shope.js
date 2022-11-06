@@ -31,15 +31,6 @@ const CardBuilder = (props)=>{
 
 function Shope(props) {
 
-  const [total, setTotal] = useState(0)
-
-  useEffect(()=>{
-    console.log(props.cart);
-    if(props.cart.length != 0){
-      setTotal(calculateTotal(props.cart))
-    }
-  }, [props.cart])
-
   const addToCart = (index)=>{
     let temp = props.cart;
     let flag = false;
@@ -56,14 +47,6 @@ function Shope(props) {
       props.updateCart([...temp])
     }
     
-  }
-
-  const calculateTotal = (cart)=>{
-      var amount = cart.reduce((all, item)=>{
-        return all + (item.price * item.piece)
-      }, 0)
-      console.log(amount);
-      return amount;
   }
 
   return (

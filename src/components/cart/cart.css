@@ -1,9 +1,9 @@
-.cart{
-    padding-top: 6rem !important;
+.items{
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: 85vh;
+    justify-self: end;
 }
 
 .cartList{
@@ -18,6 +18,15 @@
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
+}
+
+.cart{
+    padding-top: 6rem !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+    gap: 1rem;
 }
 
 .cartList > .item > .info{
@@ -40,14 +49,57 @@
     border-radius: 4px;
     transition: .4s;
     cursor: pointer;
+}
 
+.controls > button:hover{
+    color: black;
+    background-color: white;
 }
 
 .controls{
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .controls > span{
     font-size: 1.3rem;
+}
+
+.remove-btn{
+    padding: .5rem 1rem;
+    background-color: red;
+    color: white;
+    border: 3px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .4s;
+}
+
+.remove-btn:hover{
+    background-color: white;
+    color: red;
+}
+
+
+.order-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.order-summery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-info > p{
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
