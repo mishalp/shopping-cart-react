@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './home.css'
 import right from '../../images/right.jpg';
 
@@ -10,7 +11,8 @@ function Home() {
             <p className="caption">
               We have Everything you want, come be Amazed
             </p>
-        <div><a href="/shope"><button>Shope Now</button></a></div>
+        <div>
+        <Link to='/shope'><button>Shope Now</button></Link></div>
         </div>
         <div className="right">
           <img src={right} alt="" />

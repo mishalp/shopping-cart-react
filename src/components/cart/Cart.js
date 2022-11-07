@@ -47,7 +47,7 @@ const Cart = (props) => {
                                 <div className="controls">
                                     <button data-index={index} onClick={decrementCount}>-</button> <span>{item.piece}</span> <button onClick={incrementCount} data-index={index}>+</button>
                                 </div>
-                                <h2>${dollarIndianLocale.format(item.price)}</h2>
+                                <h2>₹{dollarIndianLocale.format(item.price)}</h2>
                                 <button className="remove-btn" onClick={removeItem} data-index={index}>Remove</button>
                             </div>
                         </div>
@@ -60,8 +60,18 @@ const Cart = (props) => {
         <div className="order-summery">
             <h1>Order Summery</h1>
             <div className="order-info">
-            <p>Total items: {props.cart.length > 0 && props.cartCount}</p>
-            <p>Total Amount: ₹{props.cart.length > 0 && dollarIndianLocale.format(props.total) }</p>
+                <table>
+                    <tr>
+                        <td>Total items </td>
+                        <td>{props.cart.length > 0 && props.cartCount}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Amount</td>
+                        <td style={{fontWeight:'bolder'}}>₹{props.cart.length > 0 && dollarIndianLocale.format(props.total) }</td>
+                    </tr>
+                </table>
+
+                <button>Check Out</button>
          </div>
           </div>
         }
