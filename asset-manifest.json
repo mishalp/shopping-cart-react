@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart-react/static/css/main.d1f6b29f.css",
-    "main.js": "/shopping-cart-react/static/js/main.1a6cf83a.js",
+    "main.css": "/shopping-cart-react/static/css/main.7dc67b6e.css",
+    "main.js": "/shopping-cart-react/static/js/main.63b110a7.js",
     "static/media/IPhone14.png": "/shopping-cart-react/static/media/IPhone14.659a4ac3c2a297d8f67a.png",
     "static/media/right.jpg": "/shopping-cart-react/static/media/right.280413b2db7eb09eeca1.jpg",
     "static/media/bg.jpg": "/shopping-cart-react/static/media/bg.3261e91c47de7491b551.jpg",
@@ -12,11 +12,11 @@
     "static/media/xiomi12.jpg": "/shopping-cart-react/static/media/xiomi12.a90e66c9d084cdf07edd.jpg",
     "static/media/pixel7.jpg": "/shopping-cart-react/static/media/pixel7.c8aca087bca6792d1d26.jpg",
     "index.html": "/shopping-cart-react/index.html",
-    "main.d1f6b29f.css.map": "/shopping-cart-react/static/css/main.d1f6b29f.css.map",
-    "main.1a6cf83a.js.map": "/shopping-cart-react/static/js/main.1a6cf83a.js.map"
+    "main.7dc67b6e.css.map": "/shopping-cart-react/static/css/main.7dc67b6e.css.map",
+    "main.63b110a7.js.map": "/shopping-cart-react/static/js/main.63b110a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1f6b29f.css",
-    "static/js/main.1a6cf83a.js"
+    "static/css/main.7dc67b6e.css",
+    "static/js/main.63b110a7.js"
   ]
 }
