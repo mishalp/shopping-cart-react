@@ -3,8 +3,15 @@ import './cart.css'
 
 
 const Cart = (props) => {
-    console.log(props.cart);
+    
+   const [checkout, setCheckout] = useState(false)
+
     let dollarIndianLocale = Intl.NumberFormat('en-IN');
+
+    const doCheckout = ()=>{
+        setCheckout(!checkout)
+        props.updateCart([])
+    }
 
     const incrementCount = (e) => {
         let temp = props.cart;
@@ -71,12 +78,24 @@ const Cart = (props) => {
                     </tr>
                 </table>
 
-                <button>Check Out</button>
+                <button onClick={doCheckout}>Check Out</button>
          </div>
           </div>
         }
-            
+      {checkout? (
+            <div className="popup">
+            <div className="popup-inner">
+              <img src={process.env.PUBLIC_URL+"/images/avangers.jpg"} alt="" />
+              <h2>Check Out</h2>
+              <p>Successfull</p>
+              <button onClick={()=>{setCheckout(!checkout)}} >OK</button>
+            </div>
+          </div>
+      ):""
+} 
+
         </div>
+        
     )
 }
 

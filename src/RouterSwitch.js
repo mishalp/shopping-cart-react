@@ -45,7 +45,7 @@ function RouterSwitch() {
   return (
     <div className='main'>
 
-      <BrowserRouter main>
+      <BrowserRouter basename='/shopping-cart-react'>
         <nav>
           <div className="title">Shopping Cart</div>
           <div className="navMenu">
