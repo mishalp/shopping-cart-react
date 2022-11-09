@@ -45,7 +45,7 @@ function RouterSwitch() {
   return (
     <div className='main'>
 
-      <BrowserRouter>
+      <BrowserRouter main>
         <nav>
           <div className="title">Shopping Cart</div>
           <div className="navMenu">
