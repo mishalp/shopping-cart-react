@@ -33,6 +33,7 @@ const Cart = (props) => {
 
     const removeItem = (e) => {
         let temp = props.cart;
+        temp[e.target.dataset.index].piece = 1;
         temp.splice(e.target.dataset.index, 1)
         props.updateCart([...temp])
         console.log(temp);
@@ -68,6 +69,8 @@ const Cart = (props) => {
             <h1>Order Summery</h1>
             <div className="order-info">
                 <table>
+                    <tbody>
+
                     <tr>
                         <td>Total items </td>
                         <td>{props.cart.length > 0 && props.cartCount}</td>
@@ -76,6 +79,7 @@ const Cart = (props) => {
                         <td>Total Amount</td>
                         <td style={{fontWeight:'bolder'}}>₹{props.cart.length > 0 && dollarIndianLocale.format(props.total) }</td>
                     </tr>
+                    </tbody>
                 </table>
 
                 <button onClick={doCheckout}>Check Out</button>
