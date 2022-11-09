@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import products from '../../product'
+import { Link } from "react-router-dom";
 import './shope.css'
 
 
@@ -14,7 +15,7 @@ const CardBuilder = (props)=>{
   return(
     <div className="cards">
       {props.product.map((item)=>{
-        return <a href="#" key={item.id}>
+        return <Link to={`/product/${item.id}`} key={item.id}>
           <div className="card">
             <img src={item.image} alt="" />
             <h2>{item.name}</h2>
@@ -23,7 +24,7 @@ const CardBuilder = (props)=>{
               <h6>₹{dollarIndianLocale.format(item.price)}</h6>
             </div>
           </div>
-        </a>
+        </Link>
       })}
     </div>
   )

@@ -2,8 +2,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 85vh;
-    justify-self: end;
 }
 
 .cartList{
@@ -22,11 +20,11 @@
 
 .cart{
     padding-top: 6rem !important;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
+    min-height: 70vh;
 }
 
 .cartList > .item > .info{

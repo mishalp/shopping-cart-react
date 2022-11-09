@@ -1,0 +1,49 @@
+.product-info{
+    padding-top: 6rem;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.main-info{
+    padding: 2rem;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-info > img{
+    width: 20rem;
+}
+
+.info-body{
+    margin: 1rem;
+}
+
+.info-body > ul{
+    list-style-type: circle;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+
+.info-body >button{
+    padding: .5rem 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    transition: .4s;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.info-body  >button:hover{
+    background-color: white;
+    color: black;
+}

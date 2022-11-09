@@ -3,8 +3,11 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Shope from './components/shope/Shope';
 import Cart from './components/cart/Cart';
+import ProductInfo from './components/productInfo/ProductInfo';
 import './style.css';
 import cartimg from './images/cart.png'
+import github from './images/github.png'
+import products from './product';
 
 
 function RouterSwitch() {
@@ -58,8 +61,13 @@ function RouterSwitch() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shope' element={<Shope cart={cart} updateCart={setCart} />} />
-        <Route path='cart' element={<Cart cart={cart} cartCount={cartCount} total={total} updateCart={setCart} />} />
+        <Route path='/cart' element={<Cart cart={cart} cartCount={cartCount} total={total} updateCart={setCart} />} />
+        <Route path='/product/:id' element={<ProductInfo products={products} cart={cart} updateCart={setCart} />} />
       </Routes>
+
+      <div className="footer">
+        <p>Copyright © mishalp </p><img src={github} alt="github logo" />
+      </div>
       </BrowserRouter>
     </div>
   )
